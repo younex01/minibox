@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 11:23:55 by shbi              #+#    #+#             */
-/*   Updated: 2023/01/01 01:32:31 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/01/02 03:06:03 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	minishell_loop(t_env **menv)
 		tokens = get_tokens(line, *menv);
         tokens = ft_lst_del_first(tokens);
 		// tokens = expand_path(*menv,tokens);
-        tokens = expand_exit_status(tokens);
         // print_list_tokens(tokens);
 		cmds = get_cmds(tokens);
         // print_list(cmds);
