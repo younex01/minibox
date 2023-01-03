@@ -10,7 +10,7 @@ t_token *new_token(char *value, e_token type)
         return (NULL);
     token->type = type;
     token->value = (char *)malloc((ft_strlen(value) + 1) * sizeof(char));
-    if (!token->value)
+    if (!token && !token->value)
         return (NULL);
     len = (ft_strlen(value) + 1);
     ft_memmove(token->value, value, len);
@@ -87,6 +87,7 @@ void    print_list_tokens(t_list *tokens)
 
 
     tmp = tokens;
+    printf("%d\n",ft_lstsize(tokens));
     while (tmp && tmp->content)
     {
         t_token *p = ((t_token *)tmp->content);

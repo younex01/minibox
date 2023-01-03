@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipes_.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shbi <shbi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:22:18 by shbi              #+#    #+#             */
-/*   Updated: 2022/12/30 22:22:58 by shbi             ###   ########.fr       */
+/*   Updated: 2023/01/02 22:40:59 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	exec_no_builted(t_env **menv, char **cmd)
 	id = fork();
 	if (id == 0)
 	{
-		signal(SIGQUIT, SIG_DFL);
+		// signal(SIGQUIT, SIG_DFL);
 		checker = check_access_path(cmd[0]);
 		if (checker == 1)
 		{
